@@ -32,4 +32,4 @@ $ make test
 
 ### License
 
-format-object is released under the MIT license.
+MIT © (Vadym Demedes)(http://vadimdemedes.com)
