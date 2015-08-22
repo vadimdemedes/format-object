@@ -32,4 +32,4 @@ $ make test
 
 ### License
 
-MIT © (Vadym Demedes)(http://vadimdemedes.com)
+MIT © [Vadym Demedes](http://vadimdemedes.com)
