@@ -1,4 +1,4 @@
-# format-object
+# format-object [![Circle CI](https://circleci.com/gh/vdemedes/format-object.svg?style=svg)](https://circleci.com/gh/vdemedes/format-object)
 
 `util.format` with object instead of argument list.
 
@@ -22,6 +22,8 @@ format('Hello, :name', {
 
 
 ### Tests
+
+[![Circle CI](https://circleci.com/gh/vdemedes/format-object.svg?style=svg)](https://circleci.com/gh/vdemedes/format-object)
 
 ```
 $ make test
