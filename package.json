@@ -1,6 +1,6 @@
 {
   "name": "format-object",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "util.format with keys and values",
   "license": "MIT",
   "author": "Vadim Demedes <vdemedes@gmail.com>",
