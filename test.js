@@ -1,27 +1,20 @@
-'use strict';
+import test from 'ava';
+import format from '.';
 
-/**
- * Dependencies
- */
+test('fail when string is missing', t => {
+	t.throws(() => format(), 'Expected an input string, got undefined');
+});
 
-const expect = require('chai').expect;
-const format = require('./');
+test('fail when params are missing', t => {
+	t.throws(() => format('a'), 'Expected a params object, got undefined');
+});
 
+test('format string', t => {
+	const input = 'Hey :name :surname';
+	const params = {
+		name: 'Steve',
+		surname: 'Angello'
+	};
 
-/**
- * Tests
- */
-
-describe ('format-object', function () {
-
-  it ('format with object', function () {
-    let input = 'Hello :name, you are :action';
-    let output = format(input, {
-      name: 'dude',
-      action: 'kicking ass'
-    });
-
-    expect(output).equal('Hello dude, you are kicking ass');
-  });
-
+	t.is(format(input, params), 'Hey Steve Angello');
 });

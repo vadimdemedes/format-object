@@ -1,15 +1,21 @@
 'use strict';
 
-function formatObject (str, params) {
-  var keys = Object.keys(params);
+module.exports = (input, params) => {
+	if (typeof input !== 'string') {
+		throw new TypeError(`Expected an input string, got ${typeof input}`);
+	}
 
-  keys.forEach(function (key) {
-    var value = params[key];
+	if (typeof params !== 'object') {
+		throw new TypeError(`Expected a params object, got ${typeof params}`);
+	}
 
-    str = str.replace(':' + key, value);
-  });
+	const keys = Object.keys(params);
 
-  return str;
-}
+	keys.forEach(key => {
+		const value = params[key];
 
-module.exports = formatObject;
+		input = input.replace(`:${key}`, value);
+	});
+
+	return input;
+};
